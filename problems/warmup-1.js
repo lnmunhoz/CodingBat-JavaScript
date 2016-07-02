@@ -3,28 +3,28 @@
 * We sleep in if it is not a weekday or we're on vacation.
 * Return True if we sleep in. */
 export const sleepIn = (weekday, vacation) => {
-  // code!
+  return !weekday || vacation
 }
 
-/* We have two monkeys, a and b, and the parameters a_smile
-* and b_smile indicate if each is smiling. We are in trouble
-* if they are both smiling or if neither of them is smiling.
+/* We have two monkeys, a and b,
+* and the parameters a_smile and b_smile indicate if each is smiling.
+* We are in trouble if they are both smiling or if neither of them is smiling.
 * Return True if we are in trouble. */
 export const monkeyTrouble = (a_smile, b_smile) => {
-  // code!
+  return (a_smile && b_smile) || (!a_smile && !b_smile)
 }
 
 /* Given two int values, return their sum.
 * Unless the two values are the same,
 * then return double their sum. */
 export const sumDouble = (a, b) => {
-  // code!
+  const sum = a + b;
+  return a !== b ? sum : sum * 2
 }
 
 /* Given an int n, return the absolute difference between n and 21,
 * except return double the absolute difference if n is over 21. */
 export const diff21 = (n) => {
-  // code!
 }
 
 /* We have a loud talking parrot.
@@ -32,14 +32,14 @@ export const diff21 = (n) => {
 * We are in trouble if the parrot is talking and the hour is before 7 or after 20.
 * Return True if we are in trouble. */
 export const parrotTrouble = (talking, hour) => {
-  // code!
+  return talking && hour < 7 || hour > 20
 }
 
 /* Given 2 ints, a and b,
-* return true if one if them is 10
+* return true if one of them is 10
 * or if their sum is 10. */
 export const makes10 = (a, b) => {
-  // code!
+  return a === 10 || b === 10 || a + b === 10
 }
 
 /* Given an int n,
@@ -61,7 +61,7 @@ export const posNeg = (a, b, negative) => {
 * has been added to the front. However, if the string
 * already begins with "not", return the string unchanged. */
 export const notString = (str) => {
-  // code!
+  return `not ${str}`
 }
 
 /* Given a non-empty string and an int n,
@@ -75,12 +75,18 @@ export const missingChar = (str, n) => {
 /* Given a string,
 * return a new string where the first and last chars have been exchanged. */
 export const frontBack = (str) => {
-  // code!
 }
 
 /*  Given a string, we'll say that the front is the first 3 chars of the string.
 * If the string length is less than 3, the front is whatever is there.
 * Return a new string which is 3 copies of the front. */
 export const front3 = (str) => {
-  // code!
+  const front = str.length < 3 ? str : str.substr(0, 3)
+  let newStr = '';
+
+  for (let i = 0; i < 3; i++) {
+      newStr += front
+  }
+
+  return newStr
 }
