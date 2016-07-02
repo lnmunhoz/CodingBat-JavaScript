@@ -1,0 +1,19 @@
+{
+  "name": "toptal-practice",
+  "version": "1.0.0",
+  "description": "Practicing for Toptal",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "lnmunhoz",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^2.2.0",
+    "gulp-util": "^3.0.7"
+  }
+}
