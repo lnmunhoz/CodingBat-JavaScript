@@ -20,8 +20,8 @@ describe('Warmup-1:', function() {
   it('sleepIn(false, true) should return true',  () => assert.isTrue(sleepIn(false, true)))
 
   it('monkeyTrouble(true, true) should return true',    () => assert.isTrue(monkeyTrouble(true, true)))
-  it('monkeyTrouble(false, false) should return false', () => assert.isTrue(monkeyTrouble(false, false)))
-  it('monkeyTrouble(true, false) should return true',   () => assert.isTrue(monkeyTrouble(true, false)))
+  it('monkeyTrouble(false, false) should return true', () => assert.isTrue(monkeyTrouble(false, false)))
+  it('monkeyTrouble(true, false) should return false',   () => assert.isFalse(monkeyTrouble(true, false)))
 
   it('sumDouble(1, 2) should return 3', () => assert.equal(sumDouble(1, 2), 3))
   it('sumDouble(3, 2) should return 5', () => assert.equal(sumDouble(3, 2), 5))
@@ -37,7 +37,7 @@ describe('Warmup-1:', function() {
 
   it('makes10(9, 10) should return true', () => assert.isTrue(makes10(9, 10)))
   it('makes10(9, 9) should return false', () => assert.isFalse(makes10(9, 9)))
-  it('makes10(1, 9) should return false', () => assert.isFalse(makes10(1, 9)))
+  it('makes10(1, 9) should return true', () => assert.isTrue(makes10(1, 9)))
 
   it('nearHunded(93) should return true', () => assert.isTrue(nearHunded(93)))
   it('nearHunded(90) should return true', () => assert.isTrue(nearHunded(90)))
@@ -60,6 +60,6 @@ describe('Warmup-1:', function() {
   it("frontBack('ab') should return 'ba'",     () =>  assert.equal(frontBack('ab'), 'ba'))
 
   it("front3('Java') should return 'JavJavJav'",      () => assert.equal(front3('Java'), 'JavJavJav'))
-  it("front3('Chocolate') should return 'Chochocho'", () => assert.equal(front3('Chocolate'), 'Chochocho'))
+  it("front3('Chocolate') should return 'ChoChoCho'", () => assert.equal(front3('Chocolate'), 'ChoChoCho'))
   it("front3('abc') should return 'abcabcabc'",       () => assert.equal(front3('abc'), 'abcabcabc'))
 });
